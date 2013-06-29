@@ -17,4 +17,4 @@ cat samples/sample1.txt | ./ctree
 </pre>
 
 <b> The result should look like this.</b><br>
-[![sample](https://github.com/Drake81/ctree/raw/develop/samples/sample1.png)](https://github.com/Drake81/ctree/raw/develop/samples/sample1.png)
+[![sample](https://github.com/Drake81/ctree/raw/master/samples/sample1.png)](https://github.com/Drake81/ctree/raw/master/samples/sample1.png)
