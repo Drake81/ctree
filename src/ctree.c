@@ -27,11 +27,14 @@
 #include <graphviz/gvc.h>
 #include <pthread.h>
 
-#include "mystuff.h"
 #include "tree.h"
 #include "dotfile.h"
 #include "md5/md5.h"
 
+
+// Helper functions
+// Delete STDIN buffer 
+void lstdin(void);
 
 //main
 int
@@ -193,3 +196,20 @@ main()
     }
     exit(EXIT_FAILURE);
 }//End of main
+
+
+///////////////////////////////////////////////////////////
+// Delete STDIN buffer 
+void
+lstdin(void)
+{
+    int zeichen;
+
+    while ((zeichen=getc(stdin)) != EOF)
+    {
+        if (zeichen == '\n')
+        {
+            break;
+        }
+    }
+}
