@@ -92,7 +92,7 @@ callGraph(void *name)
     if(system(NULL) == 0)
     {
         fprintf(stderr,"\n  --> No commandline processor available *sry*\n");
-        return 1;
+        return (void *)1;
     }
 
     char execute[MAX] = "dot -Txlib ";
@@ -101,13 +101,13 @@ callGraph(void *name)
     strcat(execute, filename);
     
     //execute
-    if(system(execute) != -1)
+    if(system(execute) == -1)
     {
-        return NULL;
+        return (void *)0;
     }
     else
     {
         fprintf(stderr,"\n  --> No commandline processor available.\n");
-        return 1;
+        return (void *)1;
     }
 }
