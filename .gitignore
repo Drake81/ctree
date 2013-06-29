@@ -1,0 +1,5 @@
+*.dot
+/src/ctree
+/ctree
+Debug/
+.settings/
