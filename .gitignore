@@ -1,3 +1,3 @@
-*.dot
+*.o
 /src/ctree
 /ctree

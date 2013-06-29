@@ -1,5 +1,30 @@
-all: src/ctree.c src/dotfile.c src/dotfile.h src/tree.c src/tree.h src/md5/md5.c src/md5/md5.h
-	gcc -Wall -std=c99 -o ctree src/ctree.c src/dotfile.c src/tree.c src/md5/md5.c -lgvc -lcdt -lgraph -lpthread
+CC = gcc
 
-clean: ctree
-	rm -r ctree
+CFLAGS = -c -std=c99 -Wall
+
+LIBS = -lgvc -lcdt -lgraph -lpthread
+
+SOURCES = ctree.o dotfile.o tree.o md5.o
+
+OBJECTS = $(SOURCES:.c = .o)
+
+EXECUTABLE = ctree
+
+all: $(OBJECTS)
+	$(CC) -o $(EXECUTABLE) $(OBJECTS) $(LIBS)
+
+ctree.o: src/ctree.c
+	$(CC) $(CFLAGS) src/ctree.c
+
+dotfile.o: src/dotfile.c src/dotfile.h
+	$(CC) $(CFLAGS) src/dotfile.c
+
+tree.o: src/tree.c src/tree.h
+	$(CC) $(CFLAGS) src/tree.c
+
+md5.o: src/md5/md5.c src/md5/md5.h
+	$(CC) $(CFLAGS) src/md5/md5.c
+
+.PHONY : clean
+clean:
+	rm -r $(OBJECTS)
