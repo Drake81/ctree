@@ -27,6 +27,8 @@
 #include <graphviz/gvc.h>
 #include <pthread.h>
 
+#include "config.h"
+
 #include "tree.h"
 #include "dotfile.h"
 #include "md5/md5.h"
