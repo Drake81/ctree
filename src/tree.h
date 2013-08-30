@@ -17,14 +17,12 @@
 #ifndef tree_INCLUDED
 #  define tree_INCLUDED
 
-#ifndef MAX
-    #define MAX 50
-#endif
 
 #include <graphviz/gvc.h>
 
 #include "md5/md5.h"
 
+#define MAX 50
 #define NDEBUG
 
 // data structure

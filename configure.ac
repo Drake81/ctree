@@ -3,7 +3,8 @@
 
 AC_PREREQ([2.69])
 AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
-AC_CONFIG_SRCDIR([src/dotfile.h])
+AM_INIT_AUTOMAKE([ctree], [0.8])
+AC_CONFIG_SRCDIR([src/])
 AC_CONFIG_HEADERS([src/config.h])
 
 # Checks for programs.
