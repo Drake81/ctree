@@ -31,7 +31,7 @@ generateGraph(TREE *tree, LEAF *curpos)
     if(curpos->left != NULL)
     {
         l = curpos->left;
-        e = agedge(tree->graph, curpos->value.node, l->value.node);
+        e = agedge(tree->graph, curpos->value.node, l->value.node,NULL,TRUE);
         agsafeset(e, "color", "red", "");
         agsafeset(e, "tailport", "l", "");
         agsafeset(e, "headport", "n", "");
@@ -41,7 +41,7 @@ generateGraph(TREE *tree, LEAF *curpos)
     if(curpos->right != NULL)
     {
         l = curpos->right;
-        e = agedge(tree->graph, curpos->value.node, l->value.node);
+        e = agedge(tree->graph, curpos->value.node, l->value.node,NULL,TRUE);
         agsafeset(e, "color", "blue", "");
         agsafeset(e, "tailport", "r", "");
         agsafeset(e, "headport", "n", "");

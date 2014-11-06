@@ -2,7 +2,7 @@ CC = gcc
 
 CFLAGS = -c -std=c99 -Wall
 
-LIBS = -lgvc -lcdt -lgraph -lpthread
+LIBS = -lgvc -lcdt -lcgraph -lpthread
 
 SOURCES = ctree.o dotfile.o tree.o md5.o
 

@@ -119,7 +119,7 @@ main()
             }
 
             //create new node --> [Should be realized as function]
-            value.node = agnode(tree->graph, value.label);
+            value.node = agnode(tree->graph, value.label,TRUE);
             char pstring[MAX];
             snprintf(pstring,MAX,"{%s | {<l> left | <r> right}}",value.label);
             //printf("%s",pstring);

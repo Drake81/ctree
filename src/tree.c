@@ -36,7 +36,7 @@ initTree(char *name1,int length)
         }
         tree->root = NULL;
         tree->gvc = gvContext();
-        tree->graph = agopen(tree->name,AGDIGRAPH);
+        tree->graph = agopen(tree->name,Agdirected,NULL);
         agsafeset(tree->graph, "rankdir", "TB", "");
         agsafeset(tree->graph, "overlap", "false", "");
         agsafeset(tree->graph, "packmode", "graph", "");
